@@ -175,7 +175,7 @@ QStringList* SQLWorker::getWeekTitles(){
 }
 
 int SQLWorker::getWorkerPosis(int workerId){
-    int posis;
+    int posis = 0;
     QSqlDatabase db = getDB(lastDBPath);
     QSqlQuery query;
     query.exec("SELECT position FROM workers WHERE worker_id = " + QString::number(workerId));
